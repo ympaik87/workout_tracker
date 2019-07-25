@@ -21,6 +21,18 @@ Moved to settings_.
 
 .. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
 
+
+Create PostgreSQL db
+* windows
+
+  $ psql Postgres
+  postgres=# CREATE ROLE username superuser;
+  postgres=# ALTER ROLE username WITH LOGIN;
+
+  $ createuser <username>
+  $ createdb workout_tracker -O <username>
+
+
 Basic Commands
 --------------
 

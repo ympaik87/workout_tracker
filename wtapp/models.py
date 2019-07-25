@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.postgres.fields import ArrayField
@@ -62,7 +63,7 @@ class Workout(models.Model):
     )
     sets_no = models.IntegerField()
     reps_no = models.IntegerField()
-    break_time_length = models.TimeField()
+    break_time_length = models.TimeField(default=datetime.time(0, 1, 30))
 
     def __str__(self):
         return self.name
